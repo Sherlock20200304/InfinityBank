@@ -1,2 +1,2 @@
-web: java -jar target/InfinityBank-1.0.jar
+web: java -war target/InfinityBank-1.0.war
 
