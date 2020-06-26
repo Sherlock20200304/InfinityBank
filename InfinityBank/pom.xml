@@ -11,7 +11,7 @@
 	<groupId>space.earth</groupId>
 	<artifactId>InfinityBank</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>InfinityBank</name>
 	<description>Demo project for Spring Boot</description>
 
