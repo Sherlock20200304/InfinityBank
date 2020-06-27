@@ -94,10 +94,11 @@ public class PrimaryTransaction {
 	public String toString() {
 		return "PrimaryTransaction [id=" + id + ", transactionType=" + transactionType + ", transactionNumber="
 				+ transactionNumber + ", transactionDate=" + transactionDate + ", transactionDescription="
-				+ transactionDescription + ", transactionAmount=" + transactionAmount + "]";
-	} 
-	
-	
+				+ transactionDescription + ", transactionAmount=" + transactionAmount + ", primaryAccount="
+				+ primaryAccount + "]";
+	}
+
+
 	
 	
 

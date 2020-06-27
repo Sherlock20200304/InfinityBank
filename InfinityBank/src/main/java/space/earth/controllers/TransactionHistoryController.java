@@ -15,6 +15,7 @@ import space.earth.entities.SavingsTransaction;
 import space.earth.formModels.ProfileUserId;
 import space.earth.service.PrimaryAccountService;
 import space.earth.service.PrimaryTransactionService;
+import space.earth.service.SavingsAccountService;
 import space.earth.service.SavingsTransactionService;
 import space.earth.service.UserService;
 
@@ -31,6 +32,9 @@ public class TransactionHistoryController {
 	
 	@Autowired
 	private PrimaryAccountService primaryAccountService;
+	
+	@Autowired
+	private SavingsAccountService savingsAccountService;
 	
 
 	@PostMapping("/primaryTransaction")
@@ -55,8 +59,15 @@ public class TransactionHistoryController {
 	@PostMapping("/savingsTransaction")
 	private ModelAndView savingsTransaction(@ModelAttribute ProfileUserId profileUserId) {
 		ModelAndView history = new ModelAndView("savingsTransactionHistory");
-		List<SavingsTransaction> savingsTransactions = new ArrayList<> (); 
-		savingsTransactions = savingsTransactionService.getAll();
+int userId = profileUserId.getUserId();
+		
+		int savingsAccountId = userService.findById(userId).get().getSavingsAccount().getId(); 
+		
+		List<Integer> transactionIds = new ArrayList<>(); 
+		transactionIds = savingsAccountService.getTransactionIdsByAccountId(savingsAccountId);
+
+		List<SavingsTransaction> savingsTransactions = new ArrayList<>();
+		savingsTransactions = savingsTransactionService.getByTransactionIds(transactionIds);
 		history.addObject("SavingsTransactions", savingsTransactions);
 		return history;
 

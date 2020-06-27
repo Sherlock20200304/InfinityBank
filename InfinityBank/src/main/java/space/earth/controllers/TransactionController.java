@@ -64,13 +64,13 @@ public ModelAndView transferBetweenAccountsOperations (@ModelAttribute Transfer 
 	int savingsAccountId = userService.getSavingsAccountIdByUserId(userId); 
 	
 	if (transfer.getTransferFrom().equals("primaryAccount")) {
-		primaryTransactionService.createWithTransfer(transfer); 
+		primaryTransactionService.createWithTransfer(transfer, primaryAccountId); 
 		primaryAccountService.updateBalanceWithTransfer(transfer,primaryAccountId);
 		savingsAccountService.updateBalanceWithTransfer(transfer,savingsAccountId); 
 		
 	}
 	else if (transfer.getTransferFrom().equals("savingsAccount")) {
-		savingsTransactionService.createWithTransfer(transfer); 
+		savingsTransactionService.createWithTransfer(transfer,savingsAccountId); 
 		primaryAccountService.updateBalanceWithTransfer(transfer,primaryAccountId);
 		savingsAccountService.updateBalanceWithTransfer(transfer,savingsAccountId); 
 		
@@ -95,12 +95,12 @@ public ModelAndView atmOperation(@ModelAttribute ATM atm) {
 	
 	if (atm.getAccount().equals("primaryAccount")) {
 		int primaryAccountId = userService.getPrimaryAccountIdByUserId(userId);
-		primaryTransactionService.createWithATM(atm); 
+		primaryTransactionService.createWithATM(atm,primaryAccountId); 
 		primaryAccountService.updateBalanceWithAtm(atm, primaryAccountId); 
 	} 
 	else if (atm.getAccount().equals("savingsAccount")) {
 		int savingsAccountId = userService.getSavingsAccountIdByUserId(userId); 
-		savingsTransactionService.createWithATM(atm); 
+		savingsTransactionService.createWithATM(atm,savingsAccountId); 
 		savingsAccountService.updateBalanceWithAtm(atm, savingsAccountId);
 		
 	}

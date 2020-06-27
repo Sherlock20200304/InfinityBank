@@ -1,13 +1,17 @@
 package space.earth.service;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import net.bytebuddy.utility.RandomString;
 import space.earth.dao.SavingsAccountDAO;
+import space.earth.entities.PrimaryTransaction;
 import space.earth.entities.SavingsAccount;
+import space.earth.entities.SavingsTransaction;
 import space.earth.formModels.ATM;
 import space.earth.formModels.Transfer;
 
@@ -65,5 +69,21 @@ public class SavingsAccountService {
 		}
 		
 	}
+
+
+
+
+
+	public List<Integer> getTransactionIdsByAccountId(int savingsAccountId) {
+		List<SavingsTransaction> savingsTransactions = new ArrayList <> (); 
+		savingsTransactions = dao.findById(savingsAccountId).get().getSavingsTransactions();
+		
+		List<Integer> savingsTransactionIds = new ArrayList<Integer> (); 
+		
+		for (int i = 0; i < savingsTransactions.size(); i++) {
+			int transactionId = savingsTransactions.get(i).getId(); 
+			savingsTransactionIds.add(transactionId); 
+	}
+		return savingsTransactionIds; }
 
 }
