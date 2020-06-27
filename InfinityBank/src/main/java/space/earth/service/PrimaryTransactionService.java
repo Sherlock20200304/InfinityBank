@@ -1,5 +1,6 @@
 package space.earth.service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -46,6 +47,7 @@ public class PrimaryTransactionService {
 		primaryTransaction.setTransactionDate(date);
 		primaryTransaction.setTransactionNumber(transactionNumber);
 		
+		
 		if (atm.getType().equals("deposit")) {
 			primaryTransaction.setTransactionDescription(
 					"Deposit to " + atm.getAccount());
@@ -66,6 +68,19 @@ public class PrimaryTransactionService {
 
 	public List<PrimaryTransaction> getAll() {
 		return (List<PrimaryTransaction>) dao.findAll();
+		
+	}
+	
+	public List<PrimaryTransaction> getByTransactionIds(List<Integer> transactionIds) {
+		
+		List<PrimaryTransaction> primaryTransactions = new ArrayList<>(); 
+		
+		for (int i = 0; i < transactionIds.size(); i++) {
+			int transactionId = transactionIds.get(i); 
+			PrimaryTransaction primaryTransaction =dao.findById(transactionId).get(); 
+			primaryTransactions.add(primaryTransaction); 
+		}
+		return primaryTransactions; 
 		
 	}
 

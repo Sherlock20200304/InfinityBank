@@ -1,11 +1,13 @@
 package space.earth.entities;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class SavingsAccount {
@@ -16,6 +18,8 @@ public class SavingsAccount {
 	private String accountNumber;
 	private BigDecimal balance;
 	
+	@OneToMany
+	private List<SavingsTransaction> savingsTransactions; 
 	
 	
 	
@@ -50,7 +54,18 @@ public class SavingsAccount {
 	}
 	public void setBalance(BigDecimal balance) {
 		this.balance = balance;
+	}
+
+
+	public List<SavingsTransaction> getSavingsTransactions() {
+		return savingsTransactions;
+	}
+
+
+	public void setSavingsTransactions(List<SavingsTransaction> savingsTransactions) {
+		this.savingsTransactions = savingsTransactions;
 	} 
+	
 	
 	
 
