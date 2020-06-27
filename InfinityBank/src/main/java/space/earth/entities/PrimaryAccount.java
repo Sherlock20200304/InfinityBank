@@ -58,6 +58,22 @@ public class PrimaryAccount {
 	public void setBalance(BigDecimal balance) {
 		this.balance = balance;
 	}
+
+
+
+
+	public List<PrimaryTransaction> getPrimaryTransactions() {
+		return primaryTransactions;
+	}
+
+
+
+
+	public void setPrimaryTransactions(List<PrimaryTransaction> primaryTransactions) {
+		this.primaryTransactions = primaryTransactions;
+	}
+	
+	
 	
 	
 	

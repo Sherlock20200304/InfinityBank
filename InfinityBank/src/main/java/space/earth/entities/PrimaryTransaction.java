@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class PrimaryTransaction {
@@ -18,6 +19,10 @@ public class PrimaryTransaction {
 	private Date transactionDate; 
 	private String transactionDescription; 
 	private BigDecimal transactionAmount;
+	
+	@ManyToOne
+	private PrimaryAccount primaryAccount; 
+	
 	public PrimaryTransaction(String transactionType, String transactionNumber, Date transactionDate,
 			String transactionDescription, BigDecimal transactionAmount) {
 		super();
@@ -71,16 +76,29 @@ public class PrimaryTransaction {
 	public void setTransactionAmount(BigDecimal transactionAmount) {
 		this.transactionAmount = transactionAmount;
 	}
+	
+	
+
+
+	public PrimaryAccount getPrimaryAccount() {
+		return primaryAccount;
+	}
+
+
+	public void setPrimaryAccount(PrimaryAccount primaryAccount) {
+		this.primaryAccount = primaryAccount;
+	}
 
 
 	@Override
 	public String toString() {
 		return "PrimaryTransaction [id=" + id + ", transactionType=" + transactionType + ", transactionNumber="
 				+ transactionNumber + ", transactionDate=" + transactionDate + ", transactionDescription="
-				+ transactionDescription + ", transactionAmount=" + transactionAmount + "]";
-	} 
-	
-	
+				+ transactionDescription + ", transactionAmount=" + transactionAmount + ", primaryAccount="
+				+ primaryAccount + "]";
+	}
+
+
 	
 	
 

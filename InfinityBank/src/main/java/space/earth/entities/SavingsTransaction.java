@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class SavingsTransaction {
@@ -21,6 +22,8 @@ public class SavingsTransaction {
 	private String transactionDescription; 
 	private BigDecimal transactionAmount;
 	
+	@ManyToOne 
+	private SavingsAccount savingsAccount; 
 	
 	
 	public SavingsTransaction(String transactionType, String transactionNumber, Date transactionDate,
@@ -110,6 +113,20 @@ public class SavingsTransaction {
 	public void setTransactionAmount(BigDecimal transactionAmount) {
 		this.transactionAmount = transactionAmount;
 	}
+	
+	
+
+
+
+	public SavingsAccount getSavingsAccount() {
+		return savingsAccount;
+	}
+
+
+
+	public void setSavingsAccount(SavingsAccount savingsAccount) {
+		this.savingsAccount = savingsAccount;
+	}
 
 
 
@@ -117,8 +134,12 @@ public class SavingsTransaction {
 	public String toString() {
 		return "SavingsTransaction [id=" + id + ", transactionType=" + transactionType + ", transactionNumber="
 				+ transactionNumber + ", transactionDate=" + transactionDate + ", transactionDescription="
-				+ transactionDescription + ", transactionAmount=" + transactionAmount + "]";
+				+ transactionDescription + ", transactionAmount=" + transactionAmount + ", savingsAccount="
+				+ savingsAccount + "]";
 	}
+
+
+
 	
 	
 
