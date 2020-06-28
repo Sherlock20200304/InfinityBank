@@ -13,21 +13,20 @@
 </head>
 <body>
 
-Hello Signup. 
 
 <form:form method = "POST" action = "/user/signup/adduser" modelAttribute = "user">
 
-Frist Name: <form:input path = "firstName" /><br> 
+Frist Name: <form:input path = "firstName" required = "true" /><br> 
 
-Last Name: <form:input path = "lastName" /><br> 
+Last Name: <form:input path = "lastName" required = "true" /><br> 
 
-Username: <form:input path = "username" /><br> 
+Username: <form:input path = "username" required = "true" /><br> 
 
-Password: <form:input path = "password" /><br> 
+Password: <form:password path = "password" required = "true" /><br> 
 
-Email: <form:input path = "email" /><br> 
+Email: <form:input path = "email" required = "true" /><br> 
 
-Phone Number: <form:input path = "phone" /><br> 
+Phone Number: <form:input path = "phone" required = "true" /><br> 
 
 <input type ="submit" value ="Sign up!"/>
 

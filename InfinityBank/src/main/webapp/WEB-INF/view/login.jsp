@@ -11,13 +11,13 @@
 </head>
 <body>
 
-This login page. <br> 
+ 
 
 <form method = "POST" action = "/user/login">
 
-Username: <input type = "text" name = "username"/><br> 
+Username: <input type = "text" name = "username" required = "true"/><br> 
 
-Password: <input type ="text" name = "password" /><br> 
+Password: <input type ="password" name = "password" required = "true" /><br> 
 
 <input type ="submit" value ="login"/>
 

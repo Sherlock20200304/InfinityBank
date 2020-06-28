@@ -11,7 +11,7 @@
 </head>
 <body>
 
-Welcome ${User.getUsername() } <br>
+ Welcome ${User.getUsername() }  <br>
 
 <p>
 
