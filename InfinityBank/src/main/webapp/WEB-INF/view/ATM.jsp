@@ -13,7 +13,7 @@
 </head>
 <body>
 
-You can deposit and withdraw money here. <br>
+ You can deposit and withdraw money here.  <br>
 
 <form:form action ="${request.getContextPath()}/atmOperation" modelAttribute = "Atm" method ="POST">
 
@@ -25,13 +25,13 @@ Deposit or Withdraw:
         </form:select>  <br>
         
 
-Primary Account or Savings Account: 
+Primary Account or Savings Account:
 <form:select path="account">  
         <form:option value="primaryAccount" label="Primary Account"/>  
         <form:option value="savingsAccount" label="Savings Account"/>   
         </form:select> <br> 
 
-Amount: <form:input path ="amount"/><br>
+ Amount: <form:input path ="amount"/><br>
 <form:hidden path="userId" value = "${ProfileFormInfo.getUserId()} "/>
 <input type = "submit" value ="Make transaction!"> 
 
