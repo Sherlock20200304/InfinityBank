@@ -7,7 +7,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="styles.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/styles.css" rel="stylesheet"/>
+
 <title>ATM</title>
 
 </head>

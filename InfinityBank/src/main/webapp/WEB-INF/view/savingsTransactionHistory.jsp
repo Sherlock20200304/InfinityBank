@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Savings Transaction History</title>
-<link href="styles.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/styles.css" rel="stylesheet"/>
 </head>
 <body>
 

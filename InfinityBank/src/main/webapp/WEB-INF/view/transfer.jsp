@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>transfer</title>
-<link href="styles.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/styles.css" rel="stylesheet"/>
 </head>
 <body>
 You can transfer money here. 
