@@ -10,11 +10,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Primary Transaction History</title>
-<link href="${pageContext.request.contextPath}/styles.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/table.css" rel="stylesheet"/>
 </head>
 <body>
 
-This is your primary account's transaction history. <br> 
+<h1>Primary Account</h1>
 
 
 <table> 

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+  text-align: center;
+  color: green;
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0; 
+   padding: 0; 
+   background-color: lightgreen; 
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto; 
+}
+
+table, th, td {
+  border: 1px solid green;
+}
+
+th{
+	 padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+td {
+	 padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+th, td{
+	padding-left: 5px;
+	padding-right: 5px; 
+}
+
