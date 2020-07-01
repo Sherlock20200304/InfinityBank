@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import net.bytebuddy.utility.RandomString;
 import space.earth.dao.SavingsAccountDAO;
 import space.earth.dao.SavingsTransactionDAO;
-import space.earth.entities.PrimaryTransaction;
 import space.earth.entities.SavingsAccount;
 import space.earth.entities.SavingsTransaction;
 import space.earth.formModels.ATM;

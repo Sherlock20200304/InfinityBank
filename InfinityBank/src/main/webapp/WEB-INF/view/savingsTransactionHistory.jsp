@@ -9,11 +9,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Savings Transaction History</title>
-<link href="${pageContext.request.contextPath}/styles.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/table.css" rel="stylesheet"/>
 </head>
 <body>
 
-This is your savings account's transaction history
+<h1>Savings Account</h1>
 <table> 
 
 <tr> 

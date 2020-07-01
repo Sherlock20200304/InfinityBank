@@ -7,22 +7,26 @@
 <head>
 <meta charset="UTF-8">
 <title>login</title>
-<link href="${pageContext.request.contextPath}/styles.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/loginSignup.css" rel="stylesheet"/>
 </head>
 <body>
 
- 
 
-<form method = "POST" action = "/user/login">
 
-Username: <input type = "text" name = "username" required = "true"/><br> 
 
-Password: <input type ="password" name = "password" required = "true" /><br> 
+<form method = "POST" action = "/user/login" id = "form">
 
-<input type ="submit" value ="login"/>
+<label> Username: </label> <input type = "text" name = "username" required = "true" /><br> 
+
+<label> Password:  </label><input type ="password" name = "password" required = "true"  /><br> 
+
+
+
+<input type ="submit" value ="LOGIN" class= "formSubmit"/>
 
 
 </form>
+
 
 
 

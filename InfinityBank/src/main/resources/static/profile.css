@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {
+  text-align: center;
+  color: green;
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0; 
+   padding: 0; 
+   background-color: lightgreen; 
+}
+
+.box {
+	border: solid 1px green; 
+	
+	width: 30%; 
+	margin: auto; 
+	
+	padding: 15px; 
+	border-radius: 5px; 
+}
+
+form {
+	margin: auto; 
+	padding: 0; 
+}
+
+.transactionHistoryForm{
+	width: 100%: 
+	
+}
+
+
+.button{
+	width: 100%; 
+	color: green; 
+	
+	background-color: lightgreen; 
+	border-radius: 5px; 
+	border: green 1px solid; 
+}
+
+.button:hover{
+	width: 100%; 
+	
+	color: hotpink; 
+}
+
+.formSubmit{
+	border-style: solid;
+	border-width: 2px;
+	 border-color: green;
+	 border-radius: 5px;
+	 
+	 padding: 5px; 
+}
+
+.formSubmit:hover{
+	color: white; 
+	background-color: green; 
+	border-style: none; 
+}
+
+

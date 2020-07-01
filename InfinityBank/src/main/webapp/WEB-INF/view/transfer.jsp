@@ -7,31 +7,36 @@
 <head>
 <meta charset="UTF-8">
 <title>transfer</title>
-<link href="${pageContext.request.contextPath}/styles.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/transaction.css" rel="stylesheet"/>
 </head>
 <body>
-You can transfer money here. 
+
+<h1>Transfer</h1>
+
+<div class = "box">
 
 <form:form action ="${request.getContextPath()} /transferOperation" modelAttribute = "Info" method ="POST">
 
 Transfer To: 
 
-<form:select path="transferTo">  
+<form:select path="transferTo" required = "true">  
         <form:option value="primaryAccount" label="Primary Account"/>  
         <form:option value="savingsAccount" label="Savings Account"/>   
         </form:select> <br> 
         
-Transfer From: <form:select path="transferFrom">  
+Transfer From: <form:select path="transferFrom" required = "true">  
         <form:option value="primaryAccount" label="Primary Account"/>  
         <form:option value="savingsAccount" label="Savings Account"/>   
         </form:select> <br> 
         
-Amount: <form:input path ="amount"/><br>
+Amount: <form:input path ="amount" required = "true"/><br>
 <form:hidden path="userId" value = "${ProfileFormInfo.getUserId()} "/>
 
-<input type = "submit" value ="Make transaction!"> 
+<input type = "submit" value ="Make transaction" class= "formSubmit"> 
 
 </form:form>
+
+</div>
 
 </body>
 </html>

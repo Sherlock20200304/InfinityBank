@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+  text-align: center;
+  color: green;
+   font-family: Arial, Helvetica, sans-serif;
+   
+   padding: 0; 
+   background-color: lightgreen; 
+   
+   
+}
+
+
+
+a {
+	text-decoration: none; 
+	border-style: solid;
+	border-width: 2px;
+	 border-color: green;
+	 border-radius: 5px;
+	 
+	 padding: 5px; 
+	 margin-top: 10px; 
+	  margin-bottom: 10px; 
+}
+
+
+a:hover {
+	color: white; 
+	background-color: green; 
+	border-style: none; 
+}
+
+

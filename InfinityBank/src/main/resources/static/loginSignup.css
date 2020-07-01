@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+  text-align: center;
+  color: green;
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0; 
+   padding: 0; 
+   background-color: lightgreen; 
+}
+
+
+
+form {
+	width: 30%;
+	margin: auto; 
+}
+
+input{
+	width:100%; 
+	background-color: Gainsboro; 
+		border-style: dotted; 
+		border-color: hotpink; 
+		display: inline-block;
+  float: left;
+}
+
+label {
+	width: 100%;
+	
+}
+
+.formSubmit{
+	background-color: Green; 
+	color: HoneyDew;
+	border:none; 
+}
+
+.formSubmit:hover{
+	background-color: hotpink; 
+}

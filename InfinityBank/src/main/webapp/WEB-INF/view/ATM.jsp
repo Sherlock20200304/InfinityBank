@@ -7,36 +7,40 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="${pageContext.request.contextPath}/styles.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/transaction.css" rel="stylesheet"/>
 
 <title>ATM</title>
 
 </head>
 <body>
 
- You can deposit and withdraw money here.  <br>
+<h1> Deposit / Withdraw</h1>  
+ 
+ <div class="box">
 
 <form:form action ="${request.getContextPath()}/atmOperation" modelAttribute = "Atm" method ="POST">
 
 
 Deposit or Withdraw: 
-<form:select path="type">  
+<form:select path="type" required = "true">  
         <form:option value="deposit" label="Deposit"/>  
         <form:option value="withdraw" label="Withdraw"/>   
         </form:select>  <br>
         
 
 Primary Account or Savings Account:
-<form:select path="account">  
+<form:select path="account" required = "true">  
         <form:option value="primaryAccount" label="Primary Account"/>  
         <form:option value="savingsAccount" label="Savings Account"/>   
         </form:select> <br> 
 
- Amount: <form:input path ="amount"/><br>
+ Amount: <form:input path ="amount" required = "true"/><br>
 <form:hidden path="userId" value = "${ProfileFormInfo.getUserId()} "/>
-<input type = "submit" value ="Make transaction!"> 
+<input type = "submit" value ="Make transaction" class= "formSubmit"> 
 
 </form:form>
+
+</div>
 
 </body>
 </html>
