@@ -9,7 +9,6 @@
 </head>
 <body class = "flexContainer">
 
-
 <div class = "flexItem">
 
  <h1 > Infinity Bank</h1>
