@@ -11,10 +11,10 @@
 <title>Signup</title>
 <link href="${pageContext.request.contextPath}/loginSignup.css" rel="stylesheet"/>
 </head>
-<body>
+<body class="flexContainer">
 
 
-<form:form method = "POST" action = "/user/signup/adduser" modelAttribute = "user">
+<form:form method = "POST" action = "/user/signup/adduser" modelAttribute = "user" class="flexItem">
 
 <label> Frist Name: </label> <form:input path = "firstName" required = "true"  /><br> 
 
@@ -27,6 +27,7 @@
 
 <label>  Phone Number:</label> <form:input path = "phone" required = "true" /><br> 
 
+<p> </p>
 
 <input type ="submit" value ="SIGN UP" class= "formSubmit"/>
 

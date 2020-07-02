@@ -23,3 +23,15 @@
 .formSubmit:hover{
 	background-color: hotpink; 
 }
+
+.flexContainer{
+	display: flex; 
+	height: 100vh;
+	flex-direction: column; 
+	align-items: center;
+}
+
+.flexItem{
+	margin-top: 25px; 
+	width: 30vw; 
+}

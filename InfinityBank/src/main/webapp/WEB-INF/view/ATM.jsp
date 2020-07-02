@@ -12,12 +12,13 @@
 <title>ATM</title>
 
 </head>
-<body>
+<body class = "flexContainer">
 
-<h1> Deposit / Withdraw</h1>  
- 
- <div class="box">
+<div class="flexItem">
+<h1 > Deposit / Withdraw</h1>  
+</div>
 
+<div class="flexItem">
 <form:form action ="${request.getContextPath()}/atmOperation" modelAttribute = "Atm" method ="POST">
 
 
@@ -28,7 +29,7 @@ Deposit or Withdraw:
         </form:select>  <br>
         
 
-Primary Account or Savings Account:
+Account:
 <form:select path="account" required = "true">  
         <form:option value="primaryAccount" label="Primary Account"/>  
         <form:option value="savingsAccount" label="Savings Account"/>   
@@ -39,7 +40,6 @@ Primary Account or Savings Account:
 <input type = "submit" value ="Make transaction" class= "formSubmit"> 
 
 </form:form>
-
 </div>
 
 </body>
