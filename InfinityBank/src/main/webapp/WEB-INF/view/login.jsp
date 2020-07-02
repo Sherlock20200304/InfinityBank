@@ -9,18 +9,18 @@
 <title>login</title>
 <link href="${pageContext.request.contextPath}/loginSignup.css" rel="stylesheet"/>
 </head>
-<body>
+<body class="flexContainer">
 
 
 
 
-<form method = "POST" action = "/user/login" id = "form">
+<form method = "POST" action = "/user/login" id = "form" class="flexItem">
 
 <label> Username: </label> <input type = "text" name = "username" required = "true" /><br> 
 
 <label> Password:  </label><input type ="password" name = "password" required = "true"  /><br> 
 
-
+<p> </p>
 
 <input type ="submit" value ="LOGIN" class= "formSubmit"/>
 

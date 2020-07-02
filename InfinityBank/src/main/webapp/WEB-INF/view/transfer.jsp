@@ -9,12 +9,14 @@
 <title>transfer</title>
 <link href="${pageContext.request.contextPath}/transaction.css" rel="stylesheet"/>
 </head>
-<body>
+<body class="flexContainer">
 
-<h1>Transfer</h1>
+<div class="flexItem">
+<h1 >Transfer</h1>
+</div>
 
-<div class = "box">
 
+<div class="flexItem">
 <form:form action ="${request.getContextPath()} /transferOperation" modelAttribute = "Info" method ="POST">
 
 Transfer To: 
@@ -35,8 +37,8 @@ Amount: <form:input path ="amount" required = "true"/><br>
 <input type = "submit" value ="Make transaction" class= "formSubmit"> 
 
 </form:form>
-
 </div>
+
 
 </body>
 </html>

@@ -4,17 +4,11 @@
   text-align: center;
   color: green;
    font-family: Arial, Helvetica, sans-serif;
-   margin: 0; 
-   padding: 0; 
+  
    background-color: lightgreen; 
 }
 
 
-
-form {
-	width: 30%;
-	margin: auto; 
-}
 
 input{
 	width:100%; 
@@ -39,3 +33,22 @@ label {
 .formSubmit:hover{
 	background-color: hotpink; 
 }
+
+.flexContainer{
+	display: flex; 
+flex-direction: column; 
+	height: 100vh; 
+  align-items: center;
+}
+
+.flexItem {
+	margin-top: 15px; 
+	width: 30vw; 
+	
+}
+
+p {
+	height: 10px; 
+}
+
+
