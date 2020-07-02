@@ -5,7 +5,7 @@
   color: green;
    font-family: Arial, Helvetica, sans-serif;
   
-   background-color: lightgreen; 
+  
 }
 
 
@@ -39,6 +39,10 @@ label {
 flex-direction: column; 
 	height: 100vh; 
   align-items: center;
+  background-image: url(img1.jpg);
+  background-size: cover; 
+  margin: 0; 
+  padding: 0; 
 }
 
 .flexItem {

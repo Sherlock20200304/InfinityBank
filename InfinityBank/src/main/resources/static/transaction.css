@@ -2,11 +2,11 @@
 
 * {
   text-align: center;
-  color: green;
+  color: black;
    font-family: Arial, Helvetica, sans-serif;
    margin: 0; 
    padding: 0; 
-   background-color: lightgreen; 
+  
 }
 
 
@@ -14,7 +14,7 @@
 
 
 .formSubmit{
-	background-color: Green; 
+	background-color: Grey; 
 	color: HoneyDew;
 	border:none; 
 	padding: 5px; 
@@ -34,4 +34,11 @@
 .flexItem{
 	margin-top: 25px; 
 	width: 30vw; 
+}
+
+body {
+	background-image: url(img2.jpg);
+  background-size: cover; 
+  margin: 0; 
+  padding: 0; 
 }
