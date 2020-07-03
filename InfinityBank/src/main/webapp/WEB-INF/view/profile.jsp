@@ -12,11 +12,13 @@
 </head>
 <body>
 
+
   <h1> Welcome ${User.getUsername() } </h1> <br>
 
-<p>
 
-<div class = "box">
+<div class="flexContainer">
+
+<div class = "box flexItem">
 
 <h2> Primary Account </h2><br> 
 <h3> Account Number: ${ User.getPrimaryAccount().getAccountNumber()} </h3> <br> 
@@ -27,9 +29,9 @@
 </form:form>
 </div>
 
-<p> 
 
-<div class = "box">
+
+<div class = "box flexItem">
 
 <h2> Savings Account  </h2><br>
 
@@ -41,9 +43,11 @@
 </form:form>
 </div>
 
-<h2> Make a Transaction</h2>
 
-<div class = "box">
+
+<div class = "box flexItem">
+
+<h2> Make a Transaction</h2>
 
 <form:form method = "POST" action = "${request.getContextPath()}/transferBetweenAccounts" modelAttribute = "ProfileUserId" class ="operationForm">
 <form:hidden path = "userId" value="${User.getUserId()}" /><br> 
@@ -57,6 +61,7 @@
 </form:form>
 
 </div >
+</div>
 
 <form method="post" action = "/user/logout" >
 
@@ -64,8 +69,6 @@
 <input type ="submit" value ="logout" class= "formSubmit"> 
 
 </form>
-
-
 
 </body>
 </html>

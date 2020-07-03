@@ -9,11 +9,18 @@
 <title>login</title>
 <link href="${pageContext.request.contextPath}/loginSignup.css" rel="stylesheet"/>
 </head>
-<body class="flexContainer">
+<body >
+
+<div class ="navBar"> 
+
+ <a class="navItem" href ="/" > HOME</a> 
+<a class="navItem" href = "/user/login/page"   > LOGIN </a>  
+<a class="navItem" href = "/user/signup/page" > SIGN UP </a>  
+
+</div> 
 
 
-
-
+<div class="flexContainer">
 <form method = "POST" action = "/user/login" id = "form" class="flexItem">
 
 <label> Username: </label> <input type = "text" name = "username" required = "true" /><br> 
@@ -27,7 +34,7 @@
 
 </form>
 
-
+</div>
 
 
 </body>

@@ -11,7 +11,17 @@
 <title>Signup</title>
 <link href="${pageContext.request.contextPath}/loginSignup.css" rel="stylesheet"/>
 </head>
-<body class="flexContainer">
+<body >
+
+<div class ="navBar"> 
+
+ <a class="navItem" href ="/" > HOME</a> 
+<a class="navItem" href = "/user/login/page"   > LOGIN </a>  
+<a class="navItem" href = "/user/signup/page" > SIGN UP </a>  
+
+</div> 
+
+<div class="flexContainer">
 
 
 <form:form method = "POST" action = "/user/signup/adduser" modelAttribute = "user" class="flexItem">
@@ -33,6 +43,8 @@
 
 
 </form:form>
+
+</div>
 
 
 </body>

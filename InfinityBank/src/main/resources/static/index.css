@@ -2,16 +2,25 @@
 
 * {
   text-align: center;
-  color: green;
+  color: Maroon;
    font-family: Arial, Helvetica, sans-serif;
  
    
-   padding: 0; 
-  
-   
+   padding: 0;   
    
 }
 
+h1{
+	font-size: 70px;
+}
+
+
+body{
+	background-image: url(img1.jpg); 
+	background-size:cover;
+	margin: 0; 
+	padding: 0; 
+}
 
 
 a {
@@ -19,8 +28,7 @@ a {
 	border-style: solid;
 	border-width: 2px;
 	 border-color: green;
-	 border-radius: 5px;
-	 
+	 border-radius: 5px; 
 	 padding: 5px; 
 	 margin-top: 10px; 
 	  margin-bottom: 10px; 
@@ -35,10 +43,10 @@ a:hover {
 
 #disclaimer{
 	width: 50%;
-	margin: auto; 
+	
 	border-style: solid;
 	border-width: 2px;
-	 border-color: green;
+	 border-color: Maroon;
 	 border-radius: 5px;
 	 
 	  padding: 5px; 
@@ -46,17 +54,43 @@ a:hover {
 }
 
 .flexContainer {
+	margin-top: 10px; 
 	display: flex; 
 	flex-direction: column; 
-	background-image: url(img1.jpg); 
-	background-size:cover;
-	margin: 0; 
-	padding: 0; 
+	  align-items: center; 
+	height: 80vh; 
 	
 }
 
 .flexItem{
-	margin: 20px; 	
+	
+}
+
+.navBar {
+	height: 20vh; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin: 0; 
+   
+	
+}
+
+.navItem{
+	
+	border-style: none; 
+	color: black; 
+	margin-left: 20px; 
+	margin-right: 40px;
+	
+}
+
+.navItem:hover{
+	
+	border-style: none; 
+	color: green; 
+	background-color:white; 
+	
 }
 
 
