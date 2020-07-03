@@ -2,19 +2,26 @@
 
 * {
   text-align: center;
-  color: green;
-   font-family: Arial, Helvetica, sans-serif;
-  
+  color: Maroon;
+   font-family: Arial, Helvetica, sans-serif; 
   
 }
 
 
+body{
+	
+	 background-image: url(img1.jpg);
+  background-size: cover; 
+  margin: 0; 
+  height: 100vh;
+	
+}
 
 input{
 	width:100%; 
 	background-color: Gainsboro; 
 		border-style: dotted; 
-		border-color: hotpink; 
+		border-color: #CD5C5C; 
 		display: inline-block;
   float: left;
 }
@@ -25,13 +32,13 @@ label {
 }
 
 .formSubmit{
-	background-color: Green; 
-	color: HoneyDew;
+	background-color: Maroon; 
+	color: Gainsboro;
 	border:none; 
 }
 
 .formSubmit:hover{
-	background-color: hotpink; 
+	background-color: #CD5C5C; 
 }
 
 .flexContainer{
@@ -39,9 +46,7 @@ label {
 flex-direction: column; 
 	height: 100vh; 
   align-items: center;
-  background-image: url(img1.jpg);
-  background-size: cover; 
-  margin: 0; 
+ margin: 0; 
   padding: 0; 
 }
 
@@ -56,3 +61,38 @@ p {
 }
 
 
+
+.navBar {
+	height: 20vh; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin: 0; 
+   
+	
+}
+
+.navItem{
+	
+	border-style: none; 
+	color: black; 
+	margin-left: 20px; 
+	margin-right: 40px;
+	text-decoration: none; 
+	 padding: 5px; 
+	 margin-top: 10px; 
+	  margin-bottom: 10px; 
+	
+}
+
+.navItem:hover{
+	
+	border-style: none; 
+	color: Maroon; 
+	background-color:white; 
+	
+	border-style:none; 
+	 border-radius: 5px; 
+	
+	
+}
