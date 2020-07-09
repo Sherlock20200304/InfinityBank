@@ -8,9 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <link href="${pageContext.request.contextPath}/transaction.css" rel="stylesheet"/>
-
 <title>ATM</title>
-
+<meta name ="viewport" content ="width=device-width, initial-scale=1.0">
 </head>
 <body class = "flexContainer">
 

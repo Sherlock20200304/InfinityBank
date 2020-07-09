@@ -84,4 +84,23 @@ body {
 	
 }
 
+@media only screen and (max-width: 600px) {
+.flexContainer{
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	
+}
+
+.flexItem{
+	
+	height: 70vh; 
+	margin: 20px; 
+	padding: 10px; 
+	
+}
+	
+	
+	} 
+
 

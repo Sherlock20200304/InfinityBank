@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>transfer</title>
 <link href="${pageContext.request.contextPath}/transaction.css" rel="stylesheet"/>
+<meta name ="viewport" content ="width=device-width, initial-scale=1.0">
 </head>
 <body class="flexContainer">
 
