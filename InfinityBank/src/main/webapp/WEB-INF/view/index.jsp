@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
-<title>Home</title>
+<meta name="description" content="This is a Java practice project. Thank you for visiting and any suggestions are welcomed.">
+<title>Infinity Bank</title>
 <link href="${pageContext.request.contextPath}/index.css" rel="stylesheet"/>
 
 </head>
