@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+
+
+.navBar {
+	height: 20vh; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+	
+}
+
+.navItem{
+	
+	border-style: none; 
+	color: black; 
+	margin-left: 20px; 
+	margin-right: 40px;
+	text-decoration: none;
+	
+}
+
+.navItem:hover{
+	
+	border-style: none; 
+	color: Maroon; 
+	background-color:white; 
+	
+}
+
+
+

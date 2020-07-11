@@ -9,18 +9,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Signup</title>
-<link href="${pageContext.request.contextPath}/loginSignup.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/index.css" rel="stylesheet"/>
 <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
 </head>
 <body >
 
-<div class ="navBar"> 
-
- <a class="navItem" href ="/" > HOME</a> 
-<a class="navItem" href = "/user/login/page"   > LOGIN </a>  
-<a class="navItem" href = "/user/signup/page" > SIGN UP </a>  
-
-</div> 
+<jsp:include page="header.jsp" />  
 
 <div class="flexContainer">
 
