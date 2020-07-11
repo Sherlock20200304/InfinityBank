@@ -3,15 +3,20 @@
 * {
   text-align: center;
   color: Maroon;
-   font-family: Arial, Helvetica, sans-serif;
- 
-   
-   padding: 0;   
+   font-family: Arial, Helvetica, sans-serif;  
+  
    
 }
 
 h1{
+	margin:0;
+	padding:0;
 	font-size: 70px;
+}
+
+h4{
+	margin:0;
+	padding:0;
 }
 
 
@@ -48,7 +53,7 @@ a:hover {
 	 border-radius: 5px;
 	 
 	background-color: rgba(255, 255, 255, 0.5);
-	  padding: 5px; 
+	  padding: 25px; 
 	 
 }
 
@@ -65,32 +70,46 @@ a:hover {
 	
 }
 
-.navBar {
-	height: 20vh; 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    margin: 0; 
-   
+input{
+	width:100%; 
+	background-color: Gainsboro; 
+		border-style: dotted; 
+		border-color: #CD5C5C; 
+		display: inline-block;
+  float: left;
+}
+
+label {
+	width: 100%;
 	
 }
 
-.navItem{
-	
-	border-style: none; 
-	color: black; 
-	margin-left: 20px; 
-	margin-right: 40px;
+.formSubmit{
+	background-color: Maroon; 
+	color: Gainsboro;
+	border:none; 
+}
+
+.formSubmit:hover{
+	background-color: #CD5C5C; 
+}
+
+.flexContainer{
+	display: flex; 
+flex-direction: column; 
+	height: 100vh; 
+  align-items: center;
+ margin: 0; 
+  padding: 0; 
+}
+
+.flexItem {
+	margin-top: 15px; 
+	width: 30vw; 
 	
 }
 
-.navItem:hover{
-	
-	border-style: none; 
-	color: Maroon; 
-	background-color:white; 
-	
+p {
+	height: 10px; 
 }
-
-
 
