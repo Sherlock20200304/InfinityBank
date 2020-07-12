@@ -15,8 +15,8 @@
 <jsp:include page="header.jsp" />  
 
 
-<div class = "flexContainer">
-<div class = "flexItem">
+<div class = "indexFlexContainer">
+<div class = "indexFlexItem">
 
  <h1 > INFINITY BANK</h1>
 
@@ -24,7 +24,7 @@
 
 </div>
 
-<div id = "disclaimer" class = "flexItem"> 
+<div class = "disclaimer"> 
 <h4> Disclaimer</h4>
 
 <p>This website is solely for learning purposes. It is not a real bank and bares no responsibility for data entered. 

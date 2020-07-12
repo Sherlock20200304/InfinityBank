@@ -16,10 +16,10 @@
 
 <jsp:include page="header.jsp" />  
 
-<div class="flexContainer">
+<div class="loginSignupFlexContainer">
 
 
-<form:form method = "POST" action = "/user/signup/adduser" modelAttribute = "user" class="flexItem">
+<form:form method = "POST" action = "/user/signup/adduser" modelAttribute = "user" class="loginSignupFlexItem">
 
 <label> Frist Name: </label> <form:input path = "firstName" required = "true"  /><br> 
 

@@ -15,8 +15,8 @@
 <jsp:include page="header.jsp" />  
 
 
-<div class="flexContainer">
-<form method = "POST" action = "/user/login" id = "form" class="flexItem">
+<div class="loginSignupFlexContainer">
+<form method = "POST" action = "/user/login" id = "form" class="loginSignupFlexItem">
 
 <label> Username: </label> <input type = "text" name = "username" required = "true" /><br> 
 
