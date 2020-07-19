@@ -25,7 +25,7 @@
 <h3> Account Number: ${ User.getPrimaryAccount().getAccountNumber()} </h3> <br> 
 <h3> Account Balance: ${User.getPrimaryAccount().getBalance()} </h3> <br> 
 <form:form method = "POST" action = "${request.getContextPath()}/primaryTransaction" modelAttribute = "ProfileUserId" class ="transactionHistoryForm">
-<form:hidden path = "userId" value="${User.getUserId()}" /><br> 
+<form:hidden path = "userId" value="${User.getUserId()}" />
 <input type ="submit" value ="Primary Transaction History" class = "button"/>
 </form:form>
 </div>
@@ -39,7 +39,7 @@
 <h3> Account Number: ${User.getSavingsAccount().getAccountNumber()} </h3><br> 
 <h3> Account Balance: ${User.getSavingsAccount().getBalance() } </h3><br> 
 <form:form method = "POST" action = "${request.getContextPath()}/savingsTransaction" modelAttribute = "ProfileUserId" class ="transactionHistoryForm">
-<form:hidden path = "userId" value="${User.getUserId()}" /><br> 
+<form:hidden path = "userId" value="${User.getUserId()}" />
 <input type ="submit" value ="Savings Transaction History" class = "button"/>
 </form:form>
 </div>
@@ -51,13 +51,13 @@
 <h2> Make a Transaction</h2>
 
 <form:form method = "POST" action = "${request.getContextPath()}/transferBetweenAccounts" modelAttribute = "ProfileUserId" class ="operationForm">
-<form:hidden path = "userId" value="${User.getUserId()}" /><br> 
+<form:hidden path = "userId" value="${User.getUserId()}" />
 <input type ="submit" value ="Transfer" class = "button"/>
 </form:form>
 
 
 <form:form method = "POST" action = "${request.getContextPath()}/ATM" modelAttribute = "ProfileUserId" class ="operationForm">
-<form:hidden path = "userId" value="${User.getUserId()}" /><br> 
+<form:hidden path = "userId" value="${User.getUserId()}" />
 <input type ="submit" value ="Deposit/Withdraw" class = "button"/>
 </form:form>
 
