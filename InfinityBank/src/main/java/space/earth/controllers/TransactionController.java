@@ -35,12 +35,12 @@ public class TransactionController {
 	
 	
 @PostMapping("transferBetweenAccounts")
-	public ModelAndView transferBetweenAccountsFormLoader (@ModelAttribute ProfileUserId profileFormInfo) {
+	public ModelAndView transferBetweenAccountsFormLoader (@ModelAttribute ProfileUserId profileUserId) {
 	ModelAndView transfer = new ModelAndView ("transfer"); 
 	
 	Transfer info = new Transfer (); 
 	transfer.addObject("Info", info); 
-	transfer.addObject("ProfileFormInfo", profileFormInfo); 
+	transfer.addObject("ProfileUserId", profileUserId);
 		return transfer; 
 	}
 
@@ -50,7 +50,7 @@ public ModelAndView atmFormLoader (@ModelAttribute ProfileUserId profileFormInfo
 	ModelAndView ATM = new ModelAndView ("ATM"); 
 	ATM atm = new ATM(); 
 	ATM.addObject("Atm", atm); 
-	ATM.addObject("ProfileFormInfo", profileFormInfo); 
+	ATM.addObject("ProfileUserId", profileFormInfo); 
 	return ATM; 
 }
 
