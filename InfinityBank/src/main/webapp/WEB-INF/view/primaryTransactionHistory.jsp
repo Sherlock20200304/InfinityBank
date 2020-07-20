@@ -11,57 +11,64 @@
 <meta charset="UTF-8">
 <title>Primary Transaction History</title>
 <link href="${pageContext.request.contextPath}/table.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/profileHeader.css" rel="stylesheet"/>
 <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-
 <ul class="navBar">
-<li> 
+		<li><form:form method="POST"
+				action="${request.getContextPath()}/nav/home"
+				modelAttribute="ProfileUserId" class="transactionHistoryForm">
+				<form:hidden path="userId" value="${User.getUserId()}" />
+				<input type="submit" value="Home" class="button" />
+			</form:form></li>
 
-<form:form method = "POST" action = "${request.getContextPath()}/nav/home" modelAttribute = "ProfileUserId" class ="transactionHistoryForm">
-<form:hidden path = "userId" value="${ProfileUserId.getUserId()}" />
-<input type ="submit" value ="Home" class = "button"/>
-</form:form>
+		<li>Accounts
+			<ul>
+				<li><form:form method="POST"
+						action="${request.getContextPath()}/primaryTransaction"
+						modelAttribute="ProfileUserId" class="transactionHistoryForm">
+						<form:hidden path="userId" value="${User.getUserId()}" />
+						<input type="submit" value="Primary Transaction History"
+							class="button" />
+					</form:form></li>
+				<li><form:form method="POST"
+						action="${request.getContextPath()}/savingsTransaction"
+						modelAttribute="ProfileUserId" class="transactionHistoryForm">
+						<form:hidden path="userId" value="${User.getUserId()}" />
+						<input type="submit" value="Savings Transaction History"
+							class="button" />
+					</form:form></li>
+			</ul>
 
-</li>
+		</li>
 
-<li>Accounts 
-<ul> 
-<li><form:form method = "POST" action = "${request.getContextPath()}/primaryTransaction" modelAttribute = "ProfileUserId" class ="transactionHistoryForm">
-<form:hidden path = "userId" value="${ProfileUserId.getUserId()}" />
-<input type ="submit" value ="Primary" class = "button"/>
-</form:form></li>
+		<li>Transactions
+			<ul>
+				<li><form:form method="POST"
+						action="${request.getContextPath()}/transferBetweenAccounts"
+						modelAttribute="ProfileUserId" class="operationForm">
+						<form:hidden path="userId" value="${User.getUserId()}" />
+						<input type="submit" value="Transfer" class="button" />
+					</form:form></li>
+				<li><form:form method="POST"
+						action="${request.getContextPath()}/ATM"
+						modelAttribute="ProfileUserId" class="operationForm">
+						<form:hidden path="userId" value="${User.getUserId()}" />
+						<input type="submit" value="Deposit/Withdraw" class="button" />
+					</form:form></li>
+			</ul>
+		</li>
 
-<li><form:form method = "POST" action = "${request.getContextPath()}/savingsTransaction" modelAttribute = "ProfileUserId" class ="transactionHistoryForm">
-<form:hidden path = "userId" value="${ProfileUserId.getUserId()}" />
-<input type ="submit" value ="Savings" class = "button"/>
-</form:form></li>
-</ul>
+		<li><form method="post" action="/user/logout">
 
-</li>
+				<input type="hidden" name="status" value="destroy"> <input
+					type="submit" value="logout">
 
-<li>Transactions
-<ul>
-<li><form:form method = "POST" action = "${request.getContextPath()}/transferBetweenAccounts" modelAttribute = "ProfileUserId" class ="transactionHistoryForm">
-<form:hidden path = "userId" value="${ProfileUserId.getUserId()}" />
-<input type ="submit" value ="Transfer" class = "button"/>
-</form:form></li>
-<li> <form:form method = "POST" action = "${request.getContextPath()}/ATM" modelAttribute = "ProfileUserId" class ="transactionHistoryForm">
-<form:hidden path = "userId" value="${ProfileUserId.getUserId()}" />
-<input type ="submit" value ="Deposit/Withdraw" class = "button"/>
-</form:form> </li>
-</ul>
- </li>
- 
- <li><form method="post" action = "/user/logout" >
+			</form></li>
 
-<input type ="hidden" name="status" value="destroy"> 
-<input type ="submit" value ="logout"> 
-
-</form></li>
-
-</ul>
+	</ul>
 
 
 
