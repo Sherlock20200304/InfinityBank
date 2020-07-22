@@ -52,6 +52,7 @@ public class TransactionHistoryController {
 		primaryTransactions = primaryTransactionService.getByTransactionIds(transactionIds);
 		
 		history.addObject("PrimaryTransactions", primaryTransactions);
+		history.addObject("ProfileUserId", profileUserId);
 
 		return history;
 	}
@@ -69,6 +70,7 @@ int userId = profileUserId.getUserId();
 		List<SavingsTransaction> savingsTransactions = new ArrayList<>();
 		savingsTransactions = savingsTransactionService.getByTransactionIds(transactionIds);
 		history.addObject("SavingsTransactions", savingsTransactions);
+		history.addObject("ProfileUserId", profileUserId);
 		return history;
 
 	}

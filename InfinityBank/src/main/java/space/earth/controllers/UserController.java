@@ -96,6 +96,7 @@ public class UserController {
 			
 	
 			profile.addObject("ProfileUserId", profileUserId);
+			
 
 			return profile;
 
