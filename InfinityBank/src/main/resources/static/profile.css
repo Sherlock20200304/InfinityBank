@@ -18,12 +18,15 @@ body{
 
 
 
-h2 {
-	font-size: 20px;
-}
+
 
 h3 {
-	font-size: 20px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.highlight{
+	font-weight: bold; 
 }
 
 
@@ -55,7 +58,7 @@ form {
 	background-color: lightpink; 
 	border-radius: 5px; 
 	border-style: none;
-	border-color: hotpink; 
+	
 	padding: 5px; 
 }
 
@@ -105,18 +108,19 @@ body {
 }
 
 
-ul {
-	list-style: none;
-	
-}
+
 
 
 @media only screen and (max-width: 1024px) {
+	
+	.content{
+	margin-top: 50px;}
 
 	.flexContainer{
 	display: flex; 
 	flex-direction: column; 
 	align-items: center; 
+	width: 100vw;
 	
 }
 

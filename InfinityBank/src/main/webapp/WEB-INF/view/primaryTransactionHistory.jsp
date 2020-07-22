@@ -16,29 +16,30 @@
 </head>
 <body>
 
+
 <ul class="navBar">
 		<li><form:form method="POST"
 				action="${request.getContextPath()}/nav/home"
-				modelAttribute="ProfileUserId" class="transactionHistoryForm">
+				modelAttribute="ProfileUserId" >
 				<form:hidden path="userId" value="${User.getUserId()}" />
-				<input type="submit" value="Home" class="button" />
+				<input type="submit" value="Home"  />
 			</form:form></li>
 
 		<li>Accounts
 			<ul>
 				<li><form:form method="POST"
 						action="${request.getContextPath()}/primaryTransaction"
-						modelAttribute="ProfileUserId" class="transactionHistoryForm">
+						modelAttribute="ProfileUserId" >
 						<form:hidden path="userId" value="${User.getUserId()}" />
 						<input type="submit" value="Primary Transaction History"
-							class="button" />
+							 />
 					</form:form></li>
 				<li><form:form method="POST"
 						action="${request.getContextPath()}/savingsTransaction"
-						modelAttribute="ProfileUserId" class="transactionHistoryForm">
+						modelAttribute="ProfileUserId" >
 						<form:hidden path="userId" value="${User.getUserId()}" />
 						<input type="submit" value="Savings Transaction History"
-							class="button" />
+							 />
 					</form:form></li>
 			</ul>
 
@@ -48,15 +49,15 @@
 			<ul>
 				<li><form:form method="POST"
 						action="${request.getContextPath()}/transferBetweenAccounts"
-						modelAttribute="ProfileUserId" class="operationForm">
+						modelAttribute="ProfileUserId" >
 						<form:hidden path="userId" value="${User.getUserId()}" />
-						<input type="submit" value="Transfer" class="button" />
+						<input type="submit" value="Transfer"  />
 					</form:form></li>
 				<li><form:form method="POST"
 						action="${request.getContextPath()}/ATM"
-						modelAttribute="ProfileUserId" class="operationForm">
+						modelAttribute="ProfileUserId" >
 						<form:hidden path="userId" value="${User.getUserId()}" />
-						<input type="submit" value="Deposit/Withdraw" class="button" />
+						<input type="submit" value="Deposit/Withdraw"  />
 					</form:form></li>
 			</ul>
 		</li>
@@ -70,6 +71,7 @@
 
 	</ul>
 
+<div class="content">
 
 
 <h1>Primary Account</h1>
@@ -100,6 +102,7 @@
 
 </table>
 
+</div>
 
 </body>
 </html>
