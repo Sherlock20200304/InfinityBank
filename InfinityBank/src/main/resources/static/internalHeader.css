@@ -54,14 +54,45 @@ ul li input[type="submit"]:hover{
 	background-color: white;
 }
 
+.mobileNavBar{
+	display: none;
+	position: absolute; 
+	bottom: 40px; 
+	width: 100vw;
+}
+
+.burger{
+	display: none;
+	}
+
+.mobileNavItem{
+	
+	display: block;
+}
+
+
 @media only screen and (max-width: 1024px) {
 	.navBar{
-	flex-direction: column; 
-	position: bottom; 
+	display: none;
 	
 	}
-	ul li ul {
+	.burger{
 	display: block;
+	}
+	
+	ul li input[type="submit"]{
+	
+	background: none;
+	
+}
+
+ul li{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+ul li:hover{
+	background-color: white;
+	
 }
 	
 	
