@@ -28,5 +28,42 @@
 	
 }
 
+.burger{
+	display:none;
+}
+
+.mobileBar{
+	display: none ;
+	flex-direction: column; 
+	width: 100vw;
+	position: absolute; 
+	bottom: 40px;
+}
+
+.mobileNavItem{
+	display:block;
+	border: none; 
+	background-color: rgba(255, 255, 255, 0.5);
+	
+}
+
+.mobileNavItem:hover{
+	background-color: white;
+	color: black;
+	
+}
+
+@media only screen and (max-width: 1024px) {
+	.navBar{
+	display: none;}
+	
+	.burger{
+	display:block;
+	}
+	
+	
+	
+}
+
 
 

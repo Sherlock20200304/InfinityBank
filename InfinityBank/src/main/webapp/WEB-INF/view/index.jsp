@@ -15,6 +15,9 @@
 <jsp:include page="header.jsp" />  
 
 
+
+
+
 <div class = "indexFlexContainer">
 <div class = "indexFlexItem">
 

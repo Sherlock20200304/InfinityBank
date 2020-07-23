@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <link href="${pageContext.request.contextPath}/transaction.css"
 	rel="stylesheet" />
-	<link href="${pageContext.request.contextPath}/profileHeader.css" rel="stylesheet"/>
+	<link href="${pageContext.request.contextPath}/internalHeader.css" rel="stylesheet"/>
 <title>ATM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -69,6 +69,62 @@
 			</form></li>
 
 	</ul>
+	
+	<!-- Mobile Navigation Bar -->
+<img src="${pageContext.request.contextPath}/burger.png"
+		style="width: 40px" class="burger">
+	
+
+<ul class="mobileNavBar">
+		<li class="mobileNavItem"><form:form method="POST"
+				action="${request.getContextPath()}/nav/home"
+				modelAttribute="ProfileUserId" >
+				<form:hidden path="userId" value="${User.getUserId()}" />
+				<input type="submit" value="Home"  />
+			</form:form></li>
+
+		
+				<li class="mobileNavItem"><form:form method="POST"
+						action="${request.getContextPath()}/primaryTransaction"
+						modelAttribute="ProfileUserId" >
+						<form:hidden path="userId" value="${User.getUserId()}" />
+						<input type="submit" value="Primary Transaction History"
+							 />
+					</form:form></li>
+				<li class="mobileNavItem"><form:form method="POST"
+						action="${request.getContextPath()}/savingsTransaction"
+						modelAttribute="ProfileUserId" >
+						<form:hidden path="userId" value="${User.getUserId()}" />
+						<input type="submit" value="Savings Transaction History"
+							 />
+					</form:form></li>
+			
+
+		
+
+		
+				<li class="mobileNavItem"><form:form method="POST"
+						action="${request.getContextPath()}/transferBetweenAccounts"
+						modelAttribute="ProfileUserId" >
+						<form:hidden path="userId" value="${User.getUserId()}" />
+						<input type="submit" value="Transfer"  />
+					</form:form></li>
+				<li class="mobileNavItem"><form:form method="POST"
+						action="${request.getContextPath()}/ATM"
+						modelAttribute="ProfileUserId" >
+						<form:hidden path="userId" value="${User.getUserId()}" />
+						<input type="submit" value="Deposit/Withdraw"  />
+					</form:form></li>
+			
+
+		<li class="mobileNavItem"><form method="post" action="/user/logout">
+
+				<input type="hidden" name="status" value="destroy"> <input
+					type="submit" value="logout">
+
+			</form></li>
+
+	</ul>
 
 
 
@@ -111,6 +167,11 @@ Account:
 			</form:form>
 		</div>
 	</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+		crossorigin="anonymous"></script>
+	
+	<script src="${pageContext.request.contextPath}/internalHeader.js"></script>
 
 </body>
 </html>
